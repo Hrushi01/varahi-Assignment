@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "../images/logo varahi.png";
-function Header() {
+function Header({ setIsLoggedIn }) {
+  const navigate = useNavigate();
   return (
     <div className="marginLeftZero">
       <header className="bg-white shadow">
@@ -20,6 +21,15 @@ function Header() {
                 View List
               </button>
             </Link>
+            <button
+              className="text-gray-500 hover:text-gray-700 px-3 py-2 rounded-md text-sm font-medium"
+              onClick={() => {
+                setIsLoggedIn(false);
+                navigate("/");
+              }}
+            >
+              Logout
+            </button>
           </div>
         </div>
       </header>

@@ -51,3 +51,14 @@ export const schemaupdate = Yup.object().shape({
       "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character."
     ),
 });
+
+export const schemauserupdate = Yup.object().shape({
+  fname: Yup.string()
+    .required("Required")
+    .min(2, "At least 2 characters")
+    .max(50, "Cannot exceed 50 characters"),
+  lname: Yup.string()
+    .required("Last name is required")
+    .min(2, "At least 2 characters")
+    .max(50, "Cannot exceed 50 characters"),
+});

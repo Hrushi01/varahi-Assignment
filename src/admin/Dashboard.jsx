@@ -3,10 +3,10 @@ import { Link } from "react-router-dom";
 import Header from "../components/HeaderAdmin";
 import { Button } from "@mui/material";
 
-function Dashboard({ adminData }) {
+function Dashboard({ adminData, setIsLoggedIn }) {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Header />
+      <Header setIsLoggedIn={setIsLoggedIn} />
       <div className="flex items-center justify-center mt-5">
         <div className="bg-white p-6 rounded-lg shadow-xl text-center w-96">
           <h1 className="text-3xl font-semibold text-gray-800 mb-4">

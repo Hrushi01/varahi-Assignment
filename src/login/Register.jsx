@@ -1,6 +1,5 @@
 import React from "react";
 import { Formik, Form, Field } from "formik";
-// import { schema } from "../../schema/schema";
 import { schemaregister } from "./schemas";
 import { useNavigate } from "react-router";
 import { Button } from "@mui/material";
@@ -18,7 +17,7 @@ function Register({ status, registerData, setRegisterData }) {
         >
           {(props) => (
             <Form className="flex flex-col  bg-white  w-3/4 shadow justify-center items-center m-2 p-2">
-              <div>{status} Login</div>
+              <div>{status} Register</div>
               <div className="w-5/6 mb-12 mt-5">
                 <div className="  grid grid-cols-1  gap-10  p-2  ">
                   <div className=" items-center  ">
@@ -26,7 +25,7 @@ function Register({ status, registerData, setRegisterData }) {
                       className="flex justify-start font-bold font-serif text-lg text-gray-600 pl-1"
                       htmlFor="fname"
                     >
-                      fname:
+                      First name:
                     </label>
 
                     <Field
@@ -50,7 +49,7 @@ function Register({ status, registerData, setRegisterData }) {
                       className="flex justify-start font-bold font-serif text-lg text-gray-600 pl-1"
                       htmlFor="lname"
                     >
-                      lname:
+                      Last name:
                     </label>
 
                     <Field

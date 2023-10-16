@@ -3,11 +3,11 @@ import Header from "../components/HeaderUser";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router";
 
-const Profile = ({ status, profileData }) => {
+const Profile = ({ status, profileData, setIsLoggedIn }) => {
   const navigate = useNavigate();
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Header />
+      <Header setIsLoggedIn={setIsLoggedIn} />
       <div className="container mx-auto flex items-center justify-center mt-11">
         <div className="bg-white p-6 rounded-lg shadow-xl w-96 text-center">
           <h2 className="text-3xl font-semibold text-blue-600 mb-4">

@@ -12,6 +12,8 @@ function WithoutLogin({
   setData,
   registerData,
   setRegisterData,
+  loginData,
+  setLoginData,
 }) {
   return (
     <div>
@@ -23,9 +25,9 @@ function WithoutLogin({
           element={
             <Login
               status={status}
-              data={data}
-              setData={setData}
               setIsLoggedIn={setIsLoggedIn}
+              loginData={loginData}
+              setLoginData={setLoginData}
             />
           }
         />
@@ -34,9 +36,9 @@ function WithoutLogin({
           element={
             <Login
               status={status}
-              data={data}
-              setData={setData}
               setIsLoggedIn={setIsLoggedIn}
+              loginData={loginData}
+              setLoginData={setLoginData}
             />
           }
         />

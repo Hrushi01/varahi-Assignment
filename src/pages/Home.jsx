@@ -2,13 +2,13 @@ import React from "react";
 import HeaderU from "../components/HeaderUser";
 import HeaderA from "../components/HeaderAdmin";
 
-function Home({ status }) {
+function Home({ status, setIsLoggedIn }) {
   return (
     <div className="bg-gray-100 min-h-screen">
       {status === "Admin" ? (
-        <HeaderA />
+        <HeaderA setIsLoggedIn={setIsLoggedIn} />
       ) : status === "User" ? (
-        <HeaderU />
+        <HeaderU setIsLoggedIn={setIsLoggedIn} />
       ) : (
         <></>
       )}

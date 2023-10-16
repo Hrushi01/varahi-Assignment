@@ -2,10 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../components/HeaderUser";
 
-const Dashboard = ({ profileData }) => {
+const Dashboard = ({ profileData, setIsLoggedIn }) => {
   return (
     <div className="bg-gray-100 min-h-screen">
-      <Header />
+      <Header setIsLoggedIn={setIsLoggedIn} />
       <div className="container mx-auto flex items-center justify-center h-72">
         <div className="bg-white p-6 rounded-lg shadow-xl text-center w-96">
           <h1 className="text-2xl font-bold text-gray-800 mb-4">

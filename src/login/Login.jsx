@@ -7,17 +7,38 @@ import { Button } from "@mui/material";
 
 const Login = (props) => {
   const navigate = useNavigate();
-  const { data, status, setData, setIsLoggedIn } = props;
-  console.log("gg", data);
+  const { status, setIsLoggedIn, loginData, setLoginData } = props;
+  console.log("gg", loginData, status);
+
+  const handelsubmit = () => {
+    if (status === "User") {
+      if (
+        loginData.username === "Hrushi" &&
+        loginData.password === "Hrushi@123"
+      ) {
+        console.log("jsjsjsjsjs user");
+        setIsLoggedIn(true);
+      }
+    }
+    if (status === "Admin") {
+      if (
+        loginData.username === "Varahi" &&
+        loginData.password === "Varahi@123"
+      ) {
+        console.log("jsjsjsjsjs admin");
+        setIsLoggedIn(true);
+      }
+    }
+  };
 
   return (
     <>
       <div className="flex justify-center pt-16">
         <Formik
-          initialValues={data}
+          initialValues={loginData}
           validationSchema={schemalogin}
           onSubmit={() => {
-            setIsLoggedIn(true);
+            handelsubmit();
             navigate("/");
           }}
         >
@@ -83,7 +104,17 @@ const Login = (props) => {
                     variant="contained"
                     size="large"
                     onClick={() => {
-                      setData(props.values);
+                      navigate("/");
+                    }}
+                  >
+                    Back
+                  </Button>
+                  <Button
+                    type="submit"
+                    variant="contained"
+                    size="large"
+                    onClick={() => {
+                      setLoginData(props.values);
                     }}
                   >
                     Submit
@@ -103,6 +134,26 @@ const Login = (props) => {
             </Form>
           )}
         </Formik>
+      </div>
+      <div className="flex justify-around">
+        <div className="mt-8 border-2 border-gray-500 rounded-lg p-4 text-center w-fit">
+          <p className="text-lg font-semibold">
+            For login use the following credentials:
+          </p>
+          {status === "User" ? (
+            <div>
+              <p>Username: Hrushi</p>
+              <p>Password: Hrushi@123</p>
+            </div>
+          ) : status === "Admin" ? (
+            <div>
+              <p>Username: Varahi</p>
+              <p>Password: Varahi@123</p>
+            </div>
+          ) : (
+            <></>
+          )}{" "}
+        </div>
       </div>
     </>
   );

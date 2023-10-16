@@ -6,7 +6,6 @@ import student from "./images/1.png";
 import admin from "./images/2.png";
 
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faQuoteLeft, faQuoteRight } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +38,7 @@ function Decide(props) {
                 type="button"
                 className="flex items-center justify-center space-x-2 text-lg font-medium text-gray-900 hover:text-gray-700 py-3"
                 onClick={() => {
-                  setStatus("admin");
+                  setStatus("Admin");
                 }}
               >
                 <img src={admin} alt="admin" className="w-20 h-20" />
@@ -53,7 +52,7 @@ function Decide(props) {
                 type="button"
                 className="flex items-center justify-center space-x-2 text-lg font-medium text-gray-900 hover:text-gray-700 py-3"
                 onClick={() => {
-                  setStatus("user");
+                  setStatus("User");
                 }}
               >
                 <img src={student} alt="user" className="w-20 h-20" />

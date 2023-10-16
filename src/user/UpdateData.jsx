@@ -5,12 +5,12 @@ import { useNavigate } from "react-router";
 import { Button } from "@mui/material";
 import Header from "../components/HeaderUser";
 
-function UpdateData({ profileData, status, setProfileData }) {
+function UpdateData({ profileData, status, setProfileData, setIsLoggedIn }) {
   const navigate = useNavigate();
 
   return (
     <>
-      <Header />
+      <Header setIsLoggedIn={setIsLoggedIn} />
       <div className="flex justify-center pt-16">
         <Formik
           initialValues={profileData}
