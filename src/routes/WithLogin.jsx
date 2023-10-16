@@ -1,12 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import DashboardA from "./admin/Dashboard";
-import DashboardU from "./user/Dashboard";
-import Profile from "./user/Profile";
-import Home from "./pages/Home";
-import UpdateData from "./user/UpdateData";
-import List from "./admin/List";
-import ListUpdate from "./admin/ListUpdate";
+import DashboardA from "../admin/Dashboard";
+import DashboardU from "../user/Dashboard";
+import Profile from "../user/Profile";
+import Home from "../pages/Home";
+import UpdateData from "../user/UpdateData";
+import List from "../admin/List";
+import ListUpdate from "../admin/ListUpdate";
 
 function WithLogin({
   setIsLoggedIn,

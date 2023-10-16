@@ -1,8 +1,8 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import Decide from "./Decide";
-import Login from "./login/Login";
-import Register from "./login/Register";
+import Decide from "../Decide";
+import Login from "../login/Login";
+import Register from "../login/Register";
 
 function WithoutLogin({
   setIsLoggedIn,
